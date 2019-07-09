@@ -1,0 +1,17 @@
+1) Escreva em PHP um projeto contendo um formulário para os campos
+denominados 'CPF', 'nome', 'endereço' e 'email'. O projeto deverá verificar pelo lado
+do cliente, através de um script, se todos os campos foram preenchidos.
+Adicionalmente, as seguintes verificações deverão ser realizadas no servidor ao
+receber os dados do formulário:
+a) nome contendo apenas caractéres alfabéticos;
+b) email contendo um ou mais caractéres alfanuméricos, seguido de arroba,
+seguido de um domínio (sequencias de caracteres alfanuméricos separados por
+pontos);
+c) CPF válido, conforme especificado pelo Ministério da Fazenda;
+(Veja questão 2 da AD1)
+Caso o servidor encontre algum erro, deverá reapresentar o fórmulário indicando o erro
+próximo ao campo incorreto.
+
+2) Estenda o código da questão 1 para armazenar os dados num banco
+MySQL. Você deve verificiar se o CPF fornecido já não existe no banco de dados;
+se já existir, reapresente o formulário informando o erro.

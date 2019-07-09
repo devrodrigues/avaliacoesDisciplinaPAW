@@ -1,0 +1,71 @@
+1) Suponha que você tenha sido encarregado de escrever uma função
+que calcule, para cada cliente, quanto foi seu gasto total no mês. A função recebe
+como parâmetro a lista das compras realizadas no mês por todos os clientes do
+supermercado. Essa lista é representada por dois parâmetros: um vetor com os
+identificadores dos clientes (cada cliente tem um identificador numérico único) que
+realizaram cada compra e outro com os valores de cada compra. Assim, para obter os
+dados da i-ésima compra, a função deve consultar a i-ésima posição do primeiro vetor
+para descobrir o cliente que fez a compra e a i-ésima posição do segundo vetor para
+descobrir o valor da compra.
+Nestas condições, a função deve retornar um novo vetor indexado pelo identificador
+dos clientes em que cada posição contenha a soma de todas as compras realizadas
+por aquele cliente no mês. Escreva essa função em PHP.
+
+2)Suponha agora que você seja encarregado de desenvolver algumas
+funções relacionadas à parte de cadastro de novos clientes. Em particular, você deve
+desenvolver uma função que teste se o CPF provido pelo usuário é válido. Você recebe
+instruções para que essa verificação seja feita em três partes:
+1. Uma função que verifique se o formato (isto é, quantidade de algarismos e
+caracteres separadores) do CPF está correta.
+2. Uma função que remova qualquer separador de um CPF com formato válido, se
+esse existir (isto é, a função deverá remover quaisquer caracteres do CPF que
+não sejam algarismos decimais).
+3. Uma função que faça a validação dos dígitos verificadores do CPF.
+
+Nestas condições, pede-se:
+a) Escreva em PHP a função de verificação de formato usando
+expressões regulares . Um CPF tem formato válido se for da forma
+DDD.DDD.DDD-DD ou DDDDDDDDDDD, onde cada ‘D’ denota um algarismo
+decimal. Sua função deverá receber o CPF na forma de uma string e retornar 1,
+caso o formato esteja correto ou 0 caso contrário.
+b) Escreva em PHP uma função que receba um CPF na forma de uma
+string e remova os pontos e traço (se houver), retornando uma nova string
+composta apenas pelos números.
+c) Escreva em PHP uma função que verifique se os dígitos
+verificadores de um CPF (recebido na forma de uma string contendo apenas os
+números) estão corretos. Os dígitos verificadores de um CPF são os dois últimos
+e são calculados da seguinte forma:
+Primeiro dígito verificador:
+1. Pegue os 9 primeiros dígitos do CPF e multiplique cada um por pesos
+decrescentes, começando do 10 (ou seja, o primeiro dígito do CPF será
+multiplicado por 10, o segundo por 9 e assim sucessivamente).
+2. Some os resultados das multiplicações do passo anterior.
+3. Faça a divisão inteira dessa soma por 11, e guarde o resto.
+4. Se o resto da divisão for:
+a. Menor que 2, então o primeiro dígito verificador é 0.
+b. Maior ou igual 2, então o primeiro dígito verificador é (11 - resto) .
+Segundo dígito verificador:
+5. Pegue os 10 primeiros dígitos do CPF (incluindo o primeiro dígito verificador) e
+multiplique cada um por pesos decrescentes, começando do 11 (ou seja, o
+primeiro dígito do CPF será multiplicado por 11, o segundo por 10 e assim
+sucessivamente).
+6. Some os resultados das multiplicações do passo anterior.
+7. Faça a divisão inteira dessa soma por 11, e guarde o resto.
+8. Se o resto da divisão for:
+a. Menor que 2, então o segundo dígito verificador é 0.
+b. Maior ou igual 2, então o segundo dígito verificador é (11 - resto) .
+
+3) Considere agora a parte do sistema que diz respeito ao controle de
+estoque. Suponha que você seja encarregado de criar uma classe em PHP que modele
+o estoque. Sua classe deverá armazenar um conjunto de produtos presentes no
+estoque e sua quantidade. Sua classe deverá ainda fornecer métodos para a adição de
+novos produtos ao estoque e para a remoção de produtos do estoque (por exemplo,
+para o caso de uma venda).
+Além disso, cada produto por sua vez deve ser representado por uma segunda classe
+Produto . São informações necessárias uma descrição textual, um tipo (considere os
+tipos: bebida, alimento perecível, alimento não perecível e produtos de limpeza), um
+prazo de validade (em número de dias) e um valor unitário. A classe deverá prover
+métodos para a mudança do valor unitário.
+Implemente ambas as classes em PHP.
+Observação: você não precisa implementar outros métodos ou atributos, além dos que
+foram listados no enunciado.
